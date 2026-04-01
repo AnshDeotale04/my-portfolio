@@ -1,11 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>My Portfolio</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ansh Deotale — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="clock" id="clock"></span>
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Open to Opportunities
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-meta">
+        <span>📍 Nagpur, IN</span>
+        <span>🎓 Final Year CSE</span>
+      </div>
+      <button class="theme-btn" onclick="toggleTheme()">
+        <span id="themeIcon">◑</span>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">
+        Ansh Deotale
+        <span class="name-underline"></span>
+      </h1>
+      <p class="hero-tagline">Software Engineer</p>
+
+      <div class="hero-socials">
+        <!-- Email -->
+        <div class="email-wrapper">
+          <button class="social-link" onclick="toggleEmail()" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </button>
+          <div class="email-dropdown" id="emailDropdown">
+            anshdeotale04@gmail.com
+          </div>
+        </div>
+        <!-- GitHub -->
+        <a class="social-link" href="https://github.com/AnshDeotale04" target="_blank" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a class="social-link" href="https://www.linkedin.com/in/ansh-deotale/" target="_blank" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <!-- Twitter/X -->
+        <a class="social-link" href="https://x.com/Ansh_Deotale1" target="_blank" title="Twitter/X">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-hint-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+    <!-- PROJECTS SECTION -->
+  <section class="projects-section">
+    <div class="section-header reveal">
+      <span class="section-label">PORTALS</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- BLOG CARD — Pinned -->
+      <div class="project-card card-blog reveal">
+        <div class="card-top">
+          <span class="card-number">#000</span>
+          <span class="card-pin">PINNED</span>
+        </div>
+        <h3 class="card-title">Blog</h3>
+        <p class="card-desc">Thoughts on software, systems, and things I'm learning. Writing is thinking out loud.</p>
+        <div class="card-tags">
+          <span class="tag">Writing</span>
+          <span class="tag">Learning</span>
+        </div>
+        <div class="card-footer">
+          <span class="card-coming-soon">Coming Soon →</span>
+        </div>
+      </div>
+
+      <!-- CDDX -->
+      <div class="project-card reveal">
+        <div class="card-top">
+          <span class="card-number">#001</span>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 7h16M4 12h16M4 17h16M8 3v4M16 3v4M8 17v4M16 17v4"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Cross-Domain Data Exchange</h3>
+        <p class="card-desc">Federated database system enabling cross-cluster queries via central registry. Pointer-based O(1) lookups with sub-millisecond cached access and direct cluster-to-cluster communication.</p>
+        <div class="card-tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Redis</span>
+          <span class="tag">etcd</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Microservices</span>
+        </div>
+        <div class="card-footer">
+          <a class="card-link" href="https://github.com/AnshDeotale04/Cross-Domain-Data-Exchange" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Asset Portfolio -->
+      <div class="project-card reveal">
+        <div class="card-top">
+          <span class="card-number">#002</span>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 3v18h18"/><path d="m7 16 4-4 4 4 4-4"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Asset Portfolio Tracker</h3>
+        <p class="card-desc">Real-time stock portfolio manager using Alpha Vantage API. Tracks live prices, calculates P&L per stock and total portfolio value with a clean responsive dashboard.</p>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Alpha Vantage API</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+        <div class="card-footer">
+          <a class="card-link" href="https://github.com/AnshDeotale04/Asset_portfolio" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Traffic Prediction -->
+      <div class="project-card reveal">
+        <div class="card-top">
+          <span class="card-number">#003</span>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Traffic Time Prediction</h3>
+        <p class="card-desc">Penalty-based algorithm that dynamically calculates optimal green light duration per lane based on vehicle type and queue position. Designed for IoT integration.</p>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Algorithm Design</span>
+          <span class="tag">IoT-ready</span>
+        </div>
+        <div class="card-footer">
+          <a class="card-link" href="https://github.com/AnshDeotale04/Traffic-time-prediction" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+
+  <script src="script.js"></script>
+</body>
 </html>
